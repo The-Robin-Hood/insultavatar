@@ -73,18 +73,13 @@ async function shareFunction() {
       console.log(err);
     }
   } else {
-    const link = document.createElement("a");
-    link.href = dataUrl;
-    link.download = "InsultAvatar.png";
-    link.click();
-
     const textBlob = new Blob([`${content}\n\n${url}`], {
       type: "text/plain",
     });
     navigator.clipboard.write([
       new ClipboardItem({ "image/png": blob, "text/plain": textBlob }),
     ]);
-    toastr.success("Downloaded and Copied to clipboard");
+    toastr.success("Copied to clipboard");
   }
 }
 
@@ -188,8 +183,7 @@ function insultButtonAction() {
   }
   var name = document.getElementById("text").value;
   if (!/^[a-zA-Z ]+$/.test(name)) {
-    toastr.warning("Please enter a valid name");
-    return;
+    return toastr.warning("Please enter a valid name");
   }
 
   if (author.includes(name.toLowerCase())) {
@@ -200,6 +194,7 @@ function insultButtonAction() {
   document.getElementById("form").innerHTML = `<div class="loader"></div>`;
   document.getElementsByClassName("reload")[0].style.display = "block";
   document.getElementsByClassName("logo")[0].style.display = "block";
+  document.getElementsByClassName("download")[0].style.display = "block";
 
   if (!checkthestorage(name.toLowerCase())) {
     getInsult().then((insult) => {
@@ -212,6 +207,14 @@ function insultButtonAction() {
     ).innerHTML = `<h3>How many times in a day should i insult you ?</h3>`;
     document.getElementById("share").style.display = "inline-block";
   }
+}
+
+async function downloadImage() {
+  var dataUrl = await htmlToImage.toPng(document.getElementById("app"));
+  const link = document.createElement("a");
+  link.href = dataUrl;
+  link.download = "InsultAvatar.png";
+  link.click();
 }
 
 //insult Button Action
@@ -234,3 +237,7 @@ document.getElementById("text").addEventListener("keypress", (e) => {
 //share Button actions
 const shareButton = document.getElementById("share");
 shareButton.addEventListener("click", shareFunction);
+
+//download Button actions
+const downloadButton = document.getElementById("download");
+downloadButton.addEventListener("click", downloadImage);

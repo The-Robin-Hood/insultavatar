@@ -38,6 +38,7 @@ body {
 input {
   margin-top: 20px;
   max-width: 400px;
+  box-shadow: 5px 5px 10px rgb(98, 113, 114);
 }
 
 input:focus {
@@ -175,6 +176,23 @@ button {
   top: 10px;
   cursor: pointer;
   display: none;
+}
+
+.download{
+  background-color: transparent;
+  outline: transparent;
+  border: none;
+  height: 10px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  cursor: pointer;
+  display: none;
+}
+
+.download svg{
+  width:30px;
+  height:30px;
 }
 
 .logo {
