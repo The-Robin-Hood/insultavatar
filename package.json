@@ -1,0 +1,26 @@
+{
+  "name": "insultavatar",
+  "private": true,
+  "version": "1.0.0",
+  "author": {
+    "name": "Ansari",
+    "nickname": "robinhood",
+    "github": "The-Robin-Hood"
+  },
+  "description": "Generates Avatar and shows funny insults",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^2.8.0"
+  },
+  "dependencies": {
+    "@dicebear/adventurer": "^4.10.2",
+    "@dicebear/avatars": "^4.10.2",
+    "html-to-image": "^1.9.0",
+    "toastr": "^2.1.4"
+  }
+}
