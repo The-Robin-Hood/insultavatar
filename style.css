@@ -38,7 +38,7 @@ body {
 input {
   margin-top: 20px;
   max-width: 400px;
-  box-shadow: 5px 5px 10px rgb(98, 113, 114);
+  outline : 0.5px solid cadetblue;
 }
 
 input:focus {
@@ -178,7 +178,7 @@ button {
   display: none;
 }
 
-.download{
+.download {
   background-color: transparent;
   outline: transparent;
   border: none;
@@ -190,9 +190,9 @@ button {
   display: none;
 }
 
-.download svg{
-  width:30px;
-  height:30px;
+.download svg {
+  width: 30px;
+  height: 30px;
 }
 
 .logo {
