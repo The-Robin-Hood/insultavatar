@@ -6,7 +6,7 @@ import toastr from "toastr";
 
 //default variables
 var content = "Share your avatar with funny insult";
-var url = "https://the-robin-hood.github.io/InsultAvatar/";
+var url = "https://the-robin-hood.github.io/insultavatar/";
 var title = "Insult Avatar";
 
 var author = [
