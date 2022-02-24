@@ -118,8 +118,11 @@ async function avatarGenerator(e) {
       scale: 90,
       radius: 50,
       hair: [hair],
+      accessoiresProbability:15
     });
-    document.getElementById("avatar").innerHTML = avatar;
+    if (e.target.value.length > 2) {
+      document.getElementById("avatar").innerHTML = avatar;
+    }
   } else {
     document.getElementById("avatar").innerHTML = "";
   }
