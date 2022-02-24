@@ -34,6 +34,7 @@ body {
 #head {
   margin-bottom: 10px;
   font-family: "Raleway", cursive;
+  overflow-wrap: break-word;
 }
 #avatar {
   display: flex;
@@ -221,5 +222,9 @@ button {
   #app {
     width: 300px;
     padding: 10px;
+  }
+  #head{
+    margin-top: 40px;
+    max-width: 300px;
   }
 }
