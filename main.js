@@ -43,7 +43,7 @@ toastr.options.showMethod = "slideDown";
 // fetches insult from api
 async function getInsult() {
   const response = await fetch(
-    "https://the-robin-hood.github.io/insultavatar/insults.json"
+    "https://the-robin-hood.github.io/insultavatar/assets/insults.json"
   );
   const insult = await response.json();
   return insult.insults[Math.floor(Math.random() * insult.insults.length)];
