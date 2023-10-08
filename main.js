@@ -6,7 +6,7 @@ import toastr from "toastr";
 
 //default variables
 var content = "Share your avatar with funny insult";
-var url = "https://insultavatar.ml";
+var url = "https://the-robin-hood.github.io/insultavatar";
 var title = "Insult Avatar";
 
 var author = [
@@ -43,7 +43,7 @@ toastr.options.showMethod = "slideDown";
 // fetches insult from api
 async function getInsult() {
   const response = await fetch(
-    "https://insultavatar.ml/insults.json"
+    "https://the-robin-hood.github.io/insultavatar/insults.json"
   );
   const insult = await response.json();
   return insult.insults[Math.floor(Math.random() * insult.insults.length)];

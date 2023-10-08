@@ -15,7 +15,7 @@
   <p align="center">
     Avatar that insults you funnily.
     <br />
-    <a href="https://insultavatar.ml"><strong>View Website »</strong></a>
+    <a href="https://the-robin-hood.github.io/insultavatar"><strong>View Website »</strong></a>
     <br />
     <br/>
   </p>
